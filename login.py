@@ -9,30 +9,33 @@ def sign_up():
 
 def lookup_database():
     print("searching in database...")
+    return True
 
-if len(sys.argv) < 2:
-    choice = input("Are you an existing shopper(Y/N)? or sign in as guest(ENTER)")
+def main():
+    if len(sys.argv) < 2:
+        choice = input("Are you an existing shopper(Y/N)? or sign in as guest(ENTER)")
 
-    if (choice.lower() == "n"):
-        choice1 = input("Would you like to sign up(Y/N)?: ")
-        if (choice1.lower() == "Y"):
-            sign_up()
-        else:
-            print("sign in as guest")
-    elif (choice.lower() == "y"):
+        if (choice.lower() == "n"):
+            choice1 = input("Would you like to sign up(Y/N)?: ")
+            if (choice1.lower() == "Y"):
+                sign_up()
+            else:
+                print("sign in as guest")
+        elif (choice.lower() == "y"):
             username = input("Username: ")
             password = input("Password: ")
 
             lookup_database() 
-    else:
-        print("sign in as guest")
+        else:
+            print("sign in as guest")
     
-else:
-    username = sys.argv[1]
-    if(len(sys.argv) == 2):
-        password = input("Please typed in password: ")
     else:
-        password = sys.argv[2]
+        username = sys.argv[1]
+        if(len(sys.argv) == 2):
+            password = input("Please typed in password: ")
+        else:
+            password = sys.argv[2]
     
-    lookup_database()
+        lookup_database()
 
+if __name__ == "__main__": main()
