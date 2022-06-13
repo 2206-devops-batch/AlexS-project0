@@ -1,5 +1,5 @@
 import sys
-
+import csv
 
 username = ""
 password = ""
@@ -26,6 +26,7 @@ def main():
             password = input("Password: ")
 
             lookup_database() 
+            return True
         else:
             print("sign in as guest")
     
@@ -38,4 +39,4 @@ def main():
     
         lookup_database()
 
-if __name__ == "__main__": main()
+# if __name__ == "__main__": main()
