@@ -7,9 +7,14 @@ items = []
 choice2 = ""
 
 
-def menu(list=items):
-    result = ""
+def menu(datalist):
+    string= ""
+    for index, x in enumerate(datalist, start=1):
+        string += f'{index}) {x[0]} '
+        if ((index % 3) == 0 ):
+            string += '\n'
     
+    return string
 
 
 if (check == True):
@@ -19,5 +24,5 @@ if (check == True):
         for stuff in reader:
             items.append(stuff)
         
-        choice2 = input(f"{items}\nPlease select your item: ")
+        choice2 = input(menu(items) + "\nPlease select your item: ")
 
