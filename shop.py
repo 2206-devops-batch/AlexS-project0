@@ -4,6 +4,13 @@ import csv
 check = login.main()
 filename = "items.csv"
 items = []
+choice2 = ""
+
+
+def menu(list=items):
+    result = ""
+    
+
 
 if (check == True):
     with open(filename, 'r') as file:
@@ -12,6 +19,5 @@ if (check == True):
         for stuff in reader:
             items.append(stuff)
         
-        print(items)
+        choice2 = input(f"{items}\nPlease select your item: ")
 
-       

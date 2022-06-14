@@ -1,3 +1,4 @@
+from getpass import getpass
 import sys
 import csv
 
@@ -13,7 +14,7 @@ def lookup_database():
 
 def main():
     if len(sys.argv) < 2:
-        choice = input("Are you an existing shopper(Y/N)? or sign in as guest(ENTER)")
+        choice = input("Are you an existing shopper(Y/N)? or sign in as guest(ENTER) ")
 
         if (choice.lower() == "n"):
             choice1 = input("Would you like to sign up(Y/N)?: ")
@@ -23,12 +24,13 @@ def main():
                 print("sign in as guest")
         elif (choice.lower() == "y"):
             username = input("Username: ")
-            password = input("Password: ")
+            password = getpass("Password(echo off): ")
 
             lookup_database() 
             return True
         else:
             print("sign in as guest")
+            return True
     
     else:
         username = sys.argv[1]
