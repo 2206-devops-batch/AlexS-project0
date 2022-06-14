@@ -6,27 +6,33 @@ import re
 username = ""
 password = ""
 
-
 filename = 'client_info.csv'
 
 def sign_up(username, password):
-     with open(filename, 'a') as file:
-        file.write(f'{username}, {password}')
+    regex = re.match("^[a-zA-Z]\d+", username)
+
+    with open(filename, 'a') as file:
+        if regex != None:
+            file.write(f'{username}, {password}')
+            return True
+        else:
+            print("username must have letters and numbers")
+            return False
 
 
-def lookup_database():
+def lookup_database(username):
     with open(filename, 'r') as file:
-        reader = csv.reader(file)
-    return True
+        return (username in file)
+        
 
 def main():
     if len(sys.argv) < 2:
-        choice = input("Are you an existing shopper(Y/N)? or sign in as guest(ENTER) ")
+        choice = input("Are you an existing shopper(y/n)? or sign in as guest(ENTER) ")
 
         if (choice.lower() == "n"):
             choice1 = input("Would you like to sign up(Y/N)?: ")
             if (choice1.lower() == "y"):
-                username = input("Username: ")
+                username = input("Username (Must have atleast letters and numbers): ")
                 password = input("Password: ")
                 sign_up(username, password)
                 return False
@@ -36,7 +42,7 @@ def main():
             username = input("Username: ")
             password = getpass("Password(echo off): ")
 
-            lookup_database() 
+            lookup_database(username) 
             return True
         else:
             print("sign in as guest")
@@ -51,4 +57,4 @@ def main():
     
         lookup_database()
 
-# if __name__ == "__main__": main()
+if __name__ == "__main__": main()
