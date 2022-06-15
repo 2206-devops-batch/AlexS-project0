@@ -1,12 +1,15 @@
 from getpass import getpass
+from pickle import TRUE
 import sys
 import csv
 import re
+import time
+import pathlib
 
 username = ""
 password = ""
 
-filename = 'client_info.csv'
+filename = r'C:\Users\Chopp\Desktop\Revature\Projects\AlexS-project0\database\client_info.csv'
 
 def sign_up(username, password):
     regex = re.match("^[a-zA-Z]\d+", username)
@@ -20,9 +23,19 @@ def sign_up(username, password):
             return False
 
 
+def loading_bar():
+    word = "Fetching Client Infomartion..."
+    toolbar_width = len(word)
+  
+    for i in range(toolbar_width):
+        time.sleep(0.1) # do real work here
+        # update the bar
+        print(word[i], end = "", flush = True)
+
 def lookup_database(username):
     with open(filename, 'r') as file:
-        return (username in file)
+            print(file.read())
+
         
 
 def main():
