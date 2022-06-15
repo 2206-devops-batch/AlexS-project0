@@ -42,19 +42,14 @@ def main():
             username = input("Username: ")
             password = getpass("Password(echo off): ")
 
-            lookup_database(username) 
-            return True
+            return (lookup_database(username))            
         else:
             print("sign in as guest")
             return True
     
     else:
         username = sys.argv[1]
-        if(len(sys.argv) == 2):
-            password = input("Please typed in password: ")
-        else:
-            password = sys.argv[2]
-    
+        password = input("Please typed in a password: ") if (len(sys.argv) == 2) else sys.argv[2]    
         lookup_database()
 
 if __name__ == "__main__": main()

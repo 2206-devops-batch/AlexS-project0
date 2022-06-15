@@ -1,6 +1,5 @@
-from ..lib import login
 import unittest
-
+from ..lib import login
 
 class LogInTest(unittest.TestCase):
     def test_sign_up(self):
