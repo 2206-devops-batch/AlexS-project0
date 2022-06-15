@@ -1,11 +1,13 @@
 from lib import login
 import csv
 
-check = login.main()
+# check = login.main()
 filename = "items.csv"
 items = []
 choice2 = ""
 
+def check():
+    return login.main()
 
 def menu(datalist):
     string= ""
@@ -16,13 +18,15 @@ def menu(datalist):
     
     return string
 
+def main():
+    if (check == True):
+        with open(filename, 'r') as file:
+            reader = csv.reader(file)
 
-if (check == True):
-    with open(filename, 'r') as file:
-        reader = csv.reader(file)
-
-        for stuff in reader:
-            items.append(stuff)
+            for stuff in reader:
+                items.append(stuff)
         
-        choice2 = input(menu(items) + "\nPlease select your item: ")
+            choice2 = input(menu(items) + "\nPlease select your item: ")
 
+
+if __name__ == "__main__": main()
