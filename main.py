@@ -4,7 +4,6 @@ import os
 import time
 import math
 
-# check = login.main()
 filename = r"C:\Users\Chopp\Desktop\Revature\Projects\AlexS-project0\database\items.csv"
 items = []
 choice2 = ""
@@ -14,7 +13,8 @@ sum = []
 def menu(datalist):
     string= ""
     for x in datalist:
-        string += f'{x[0]} ${x[1]}\n'
+        format_num = "{:.2f}".format(x[1])
+        string += f'{x[0]} ${format_num}\n'
     
     return string
 
@@ -58,10 +58,5 @@ def main():
             print(f'{x}.....${y}')
         
         print(f'\nTotal.....${math.fsum(list(map(float,sum)))}')
-        # print(math.fsum(list(map(float,cart))))
-        
-        
-    else:
-        print("No Username/Password input")
 
 if __name__ == "__main__": main()
