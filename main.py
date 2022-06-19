@@ -12,10 +12,10 @@ sum = []
 
 def menu(datalist):
     string= ""
-    for x in datalist:
-        format_num = "{:.2f}".format(x[1])
-        string += f'{x[0]} ${format_num}\n'
-    
+    for index, x in enumerate(datalist):
+        format_num = "{:.2f}".format(float(x[1]))
+        string += f'{x[0]} ${format_num}\n' if (index % 5 == 0 and index != 0 or index == (len(datalist) - 1)) else f'{x[0]} ${format_num}  ||  '
+
     return string
 
 def lookup_item(item_name):
@@ -41,6 +41,7 @@ def main():
 
         time.sleep(0.8)
         rerun = True
+       
         while (rerun):
             os.system('cls')        
             print(menu(items))

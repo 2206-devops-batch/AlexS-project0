@@ -51,7 +51,7 @@ def sign_up(username, password):
 
 def main():
     if len(sys.argv) < 2:
-        choice = input("Are you an existing shopper(y/n)? or sign in as guest(ENTER) ")
+        choice = input("Are you an existing shopper(y/n)?")
 
         if (choice.lower() == "n"):
             choice1 = input("Would you like to sign up(y/n)?: ")
