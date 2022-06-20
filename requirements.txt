@@ -1,0 +1,4 @@
+# py -m pip install --user virtualenv$
+# source env/Scripts/activate
+
+colorama==0.4.5

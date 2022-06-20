@@ -1,15 +1,14 @@
 from getpass import getpass
 from pickle import TRUE
-import os
-import sys
-import csv
-import re
-import time
+import os, sys, csv, re, time
 from turtle import clear
+from colorama import *
+import colorama
+
 
 username = ""
 password = ""
-
+init(convert=True)
 filename = r'C:\Users\Chopp\Desktop\Revature\Projects\AlexS-project0\database\client_info.csv'
 
 def loading_bar(word):
@@ -48,7 +47,6 @@ def sign_up(username, password):
     else:
         return False
 
-
 def main():
     if len(sys.argv) < 2:
         choice = input("Are you an existing shopper(y/n)?")
@@ -68,13 +66,14 @@ def main():
             loading_bar("Searching Database...")
             time.sleep(0.4)
             if (lookup_database(username, password)) == True:
-                print("\nSuccess!!")     
+                print(f"\n{Fore.GREEN}Success!!")
+                    
                 time.sleep(0.4)
                 os.system('cls')
                 return True
             else:
                 time.sleep(0.1)
-                print("\nWrong username or password!!")
+                print(f"\n{Fore.RED}Wrong username or password!!")
                 return False      
         else:
             return False
@@ -86,13 +85,15 @@ def main():
         loading_bar("Searching Database...")
         time.sleep(0.4)        
         if (lookup_database(username, password)) == True:
-            print("\nSuccess!!")     
+            print(f"\n{Fore.GREEN}Success!!")  
+               
             time.sleep(0.4)
             os.system('cls')
+            colorama.deinit()
             return True
         else:
             time.sleep(0.1)
-            print("\nWrong username or password!!")
+            print(F"\n{Fore.RED}Wrong username or password!!")
             return False  
 
 
