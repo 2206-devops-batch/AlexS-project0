@@ -4,3 +4,6 @@ __pycache__/login.cpython-310.pyc
 __pycache__/login.cpython-310.pyc
 __pycache__/unit_test.cpython-310.pyc
 lib/__pycache__/__init__.cpython-310.pyc
+env/
+__pycache__/
+__pycache__
