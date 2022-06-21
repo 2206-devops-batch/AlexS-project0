@@ -14,12 +14,17 @@ This project was made easier in Python because it is a high level programming la
 
 - Better Menu: A menu made of pages where each page would only include at most 10 items. This way it would be easier to look for item.
 
-- Search Bar: If the item database becomes to much, a search bar is needed. 
+- Search Bar: If the item database becomes too much, a search bar is needed. 
 
 ## How to Install and Run the Project
 - Clone the repository
+
+Method One: (If you dont feel like installing external packages)
 - Install the following packages
     - pip install -r requirements.txt
+- run ./start.sh [OPTIONAL:username] [OPTIONAL:password] on terminal   
+
+Method Two:
 - run source/Scripts/activate on terminal (this will activate the virtual environment where external packages are installed)
 - run ./start.sh [OPTIONAL:username] [OPTIONAL:password] on terminal
 
