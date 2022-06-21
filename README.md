@@ -6,7 +6,7 @@ It is a retail store where users can order items.
 ## Why use python?
 This project was made easier in Python because it is a high level programming langauge with garbage collecting, dynamically-typing and object oriented features. Most importantly, python emphasize on code readability which also made it easier to learn. 
 
-## Challenges I Face:
+## Challenges I Faced:
 - Finding out one line of code can easily do the same thing as my 10 lines of code
 
 ## Future Features:
