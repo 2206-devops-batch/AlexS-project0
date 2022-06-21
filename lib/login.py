@@ -45,7 +45,10 @@ def sign_up(username, password):
             os.system('cls')
         main()
     else:
+        print("Username must have number or Username is already taken")
+        main()
         return False
+    
 
 def main():
     if len(sys.argv) < 2:
@@ -57,6 +60,7 @@ def main():
                 username = input("Username: ")
                 password = input("Password: ")
                 sign_up(username, password)
+                return True
             else:
                 return False
         elif (choice.lower() == "y"):

@@ -22,8 +22,10 @@ def lookup_item(item_name):
     for x in items:
         if item_name in x:
             cart[x[0]] = x[1]
+            print("Item found")
             return True
-        
+
+    print("Item not found" if item_name != '' else "Quitting..")    
     return False
     
 
@@ -46,9 +48,10 @@ def main():
             os.system('cls')        
             print(menu(items))
 
-            item_choice = input(f"Cart[{len(cart)}]\nPlease select you item(quit choosing by entering no input): ")
+            item_choice = input(f"Instruction: Please type in the exact name of the item and press enter\n(quit choosing by pressing enter with no input)\nCart[{len(cart)}]\n>>> ")
 
             lookup_item(item_choice)
+            time.sleep(0.9)
             rerun = True if item_choice != '' else False
         
 
