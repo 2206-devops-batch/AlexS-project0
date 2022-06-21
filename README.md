@@ -17,9 +17,7 @@ This project was made easier in Python because it is a high level programming la
 - Search Bar: If the item database becomes too much, a search bar is needed. 
 
 ## How to Install and Run the Project
-- Clone the repository
-
-Method One: 
+- run git clone https://github.com/2206-devops-batch/AlexS-project0 on terminal
 - Install the following packages
     - pip install -r requirements.txt
 - run ./start.sh [OPTIONAL:username] [OPTIONAL:password] on terminal   
