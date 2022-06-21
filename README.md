@@ -19,12 +19,12 @@ This project was made easier in Python because it is a high level programming la
 ## How to Install and Run the Project
 - Clone the repository
 
-Method One: (If you dont feel like installing external packages)
+Method One: 
 - Install the following packages
     - pip install -r requirements.txt
 - run ./start.sh [OPTIONAL:username] [OPTIONAL:password] on terminal   
 
-Method Two:
+Method Two: (If you dont feel like installing external packages)
 - run source/Scripts/activate on terminal (this will activate the virtual environment where external packages are installed)
 - run ./start.sh [OPTIONAL:username] [OPTIONAL:password] on terminal
 
