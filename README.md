@@ -24,10 +24,6 @@ Method One:
     - pip install -r requirements.txt
 - run ./start.sh [OPTIONAL:username] [OPTIONAL:password] on terminal   
 
-Method Two: (If you dont feel like installing external packages)
-- run source/Scripts/activate on terminal (this will activate the virtual environment where external packages are installed)
-- run ./start.sh [OPTIONAL:username] [OPTIONAL:password] on terminal
-
 ## How to Use the Project
 - sign up
 - type the desire item exactly as shown on the menu and press enter to add to cart
