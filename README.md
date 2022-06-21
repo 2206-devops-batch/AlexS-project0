@@ -21,10 +21,10 @@ This project was made easier in Python because it is a high level programming la
 - Install the following packages
     - pip install -r requirements.txt
 - run source/Scripts/activate on terminal (this will activate the virtual environment where external packages are installed)
-- run ./start [OPTIONAL:username] [OPTIONAL:password] on terminal
+- run ./start.sh [OPTIONAL:username] [OPTIONAL:password] on terminal
 
 ## How to Use the Project
 - sign up
-- type the desire item exactly as shown on the menu
+- type the desire item exactly as shown on the menu and press enter to add to cart
 - press enter with no input to finished up 
 
