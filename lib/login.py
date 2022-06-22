@@ -100,6 +100,4 @@ def main():
             print(F"\n{Fore.RED}Wrong username or password!!")
             return False  
 
-
-
 if __name__ == "__main__": main()

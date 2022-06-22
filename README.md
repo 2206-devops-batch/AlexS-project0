@@ -26,4 +26,5 @@ This project was made easier in Python because it is a high level programming la
 - sign up
 - type the desire item exactly as shown on the menu and press enter to add to cart
 - press enter with no input to finished up 
+- a reciept will be shown at the end
 
