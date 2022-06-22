@@ -16,6 +16,8 @@ This project was made easier in Python because it is a high level programming la
 
 - Search Bar: If the item database becomes too much, a search bar is needed. 
 
+- Category system: categorize each item and sort them
+
 ## How to Install and Run the Project
 - run git clone https://github.com/2206-devops-batch/AlexS-project0 on terminal
 - Install the following packages

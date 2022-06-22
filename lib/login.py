@@ -65,13 +65,13 @@ def main():
                 return False
         elif (choice.lower() == "y"):
             username = input("Username: ")
-            password = getpass("Password(echo off): ")
+            password = getpass("Password: ")
 
             loading_bar("Searching Database...")
             time.sleep(0.4)
             if (lookup_database(username, password)) == True:
                 print(f"\n{Fore.GREEN}Success!!")
-                    
+                   
                 time.sleep(0.4)
                 os.system('cls')
                 return True
